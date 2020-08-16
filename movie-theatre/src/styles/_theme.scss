@@ -2,17 +2,3 @@ $movie-primary:#4a073e;
 $movie-accent:#6a0e73;
 $movie-background: #705f6f;
 $movie-foreground: #f7f7f7;
-
-// Custom theme
-$movie-theme: (
-  primary: $movie-primary,
-  accent: $movie-accent,
-  is-dark: false,
-  foreground: $movie-foreground,
-  background: $movie-background
-);
-
-/// @access public
-@function get-theme() {
-  @return $movie-theme;
-}

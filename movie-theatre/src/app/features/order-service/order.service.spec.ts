@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OrderService } from './order.service';
+import { OrderService } from '@app-features/order-service/order.service';
 
 
 describe('OrderService', () => {

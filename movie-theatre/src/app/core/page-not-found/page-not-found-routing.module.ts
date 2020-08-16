@@ -7,7 +7,6 @@ import { PageNotFoundComponent } from '@app-core/page-not-found/page-not-found.c
 const routes: Routes = [{
   path: '',
   component: PageNotFoundComponent,
-  data: { title: '404' },
  }];
 
 @NgModule({

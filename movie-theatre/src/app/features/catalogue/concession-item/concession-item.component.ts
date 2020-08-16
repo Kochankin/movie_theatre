@@ -33,8 +33,6 @@ export class ConcessionItemComponent extends OnDestroyMixin implements OnInit {
   private readonly _BUTTON_REMOVE_ICON = 'remove_shopping_cart';
   private readonly _BUTTON_ADD_ICON = 'add_shopping_cart';
 
-  private readonly _INITIAL_AMOUNT = 0;
-
   private _amount: number;
   public get amount(): number {
     return this._amount;
@@ -52,13 +50,13 @@ export class ConcessionItemComponent extends OnDestroyMixin implements OnInit {
 
   constructor() {
     super();
-    this._amount = this._INITIAL_AMOUNT;
-    this._buttonIcon = this._BUTTON_REMOVE_ICON;
     this.amountChangeEmitter = new EventEmitter();
   }
 
   public ngOnInit(): void {
-    this._amountControl = new FormControl(this._INITIAL_AMOUNT);
+    this._amount = this.item.amount;
+    this._buttonIcon = this._amount ? this._BUTTON_ADD_ICON : this._BUTTON_REMOVE_ICON;
+    this._amountControl = new FormControl(this.item.amount);
 
     this._amountControl.valueChanges
       .pipe(untilComponentDestroyed(this))

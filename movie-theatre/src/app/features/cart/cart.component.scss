@@ -1,0 +1,52 @@
+@import "../../../styles/_sizes";
+@import "../../../styles/_theme";
+
+:host {
+  display: block;
+
+  height: 100%;
+
+  .cart--header {
+    margin: 0 0 $app-size-unit 0;
+    padding: $app-size-unit * 2 0;
+
+    text-align: center;
+
+    color: $movie-foreground;
+
+    background-color: $movie-accent;
+  }
+
+  .cart--items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include app-page-padding();
+  }
+
+  .cart--message {
+    padding: $app-size-unit * 2 0;
+
+    font-size: get-font-size(2);
+
+    text-align: center;
+
+    color: $movie-foreground;
+  }
+
+  .cart--actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $movie-primary;
+  }
+
+  .cart--total-sum {
+    margin: 0 $app-size-unit * 2 0 0;
+
+    color: $movie-foreground;
+  }
+}

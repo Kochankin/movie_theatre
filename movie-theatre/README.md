@@ -1,27 +1,45 @@
-# MovieTheatre
+# MOVIE THEATRE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+Application for ordering concession stand items
 
-## Development server
+> Make sure you have Node in your environment path. Run `node -v` to check
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Frontend part
 
-## Code scaffolding
+- clone this repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- setup the environment
 
-## Build
+- start application
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  - from root of the repo run `npm start` to host and run the application
+    > The application starts in development mode
+    
+    > The application will be available at http://localhost:4200
 
-## Running unit tests
+## Backend part
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ - at the moment, local backend is not used for client-side development
 
-## Running end-to-end tests
+## Application
+---
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Unit testing
+  > Chrome browser required
+- run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
 
-## Further help
+## JS static validation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- run `npm run lint` to be sure that files follow all the required rules
+
+## HTML static validation
+
+- run `npm run htmlhint:check-rules` to be sure that HTML files follow all the required rules
+
+## CSS static validation
+
+- run `npm run stylelint:check` to be sure that SCSS files follow all the required rules
+
+## Related links
+- [Angular Material](https://material.angular.io)
+- [Material Icons](https://material.io/resources/icons)

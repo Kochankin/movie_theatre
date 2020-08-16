@@ -16,6 +16,7 @@ import {
 } from '@w11k/ngx-componentdestroyed';
 import { CatalogueItem } from '@app-shared/models';
 
+
 @Component({
   selector: 'app-catalogue',
   templateUrl: './catalogue.component.html',
@@ -28,9 +29,14 @@ export class CatalogueComponent extends OnDestroyMixin implements OnInit {
     return this._catalogueItems;
   }
 
-  private _totalOrderedItemsAmount: number;
-  public get totalOrderedItemsAmount(): number {
+  private _totalOrderedItemsAmount: string;
+  public get totalOrderedItemsAmount(): string {
     return this._totalOrderedItemsAmount;
+  }
+
+  private _totalOrderedItemsCost: number;
+  public get totalOrderedItemsCost(): number {
+    return this._totalOrderedItemsCost;
   }
 
   constructor(
@@ -39,9 +45,12 @@ export class CatalogueComponent extends OnDestroyMixin implements OnInit {
     private _changeDetectorRef: ChangeDetectorRef,
   ) {
     super();
+    this._totalOrderedItemsCost = this._orderService.totalItemsCost;
+    this._totalOrderedItemsAmount = String(this._orderService.totalItemsNumber);
   }
 
   public ngOnInit(): void {
+
     this._catalogueService
       .getCatalogueItems()
       .pipe(
@@ -56,7 +65,8 @@ export class CatalogueComponent extends OnDestroyMixin implements OnInit {
 
   public amountChangeHandler(amount: number, item: CatalogueItem): void {
     this._orderService.updateOrderedItems(item, amount);
-    this._totalOrderedItemsAmount = this._orderService.totalItemsNumber;
+    this._totalOrderedItemsAmount = String(this._orderService.totalItemsNumber);
+    this._totalOrderedItemsCost = this._orderService.totalItemsCost;
   }
 
   public itemTrackByFunc(_: number, item: CatalogueItem): number {

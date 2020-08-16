@@ -9,7 +9,6 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: CartComponent,
-    data: { title: 'Cart' },
   },
 ];
 

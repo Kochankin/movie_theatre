@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CatalogueItemsService } from './catalogue-items.service';
+import { CatalogueItemsService } from '@app-features/catalogue/catalogue-items-service/catalogue-items.service';
 
 
 describe('CatalogueItemsService', () => {

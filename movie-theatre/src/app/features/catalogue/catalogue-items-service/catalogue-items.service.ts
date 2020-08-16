@@ -12,7 +12,7 @@ import items from '../../../../assets/items.json';
 
 @Injectable()
 export class CatalogueItemsService {
-  // This is an imitation of real HTTP-request with some delay
+  // This is an imitation of real http-request with some delay
   public getCatalogueItems(): Observable<CatalogueItem[]> {
     return of(items.map((item: ICatalogueItem) => CatalogueItem.parse(item))).pipe(delay(1000));
   }

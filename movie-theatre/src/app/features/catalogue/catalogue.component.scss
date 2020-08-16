@@ -1,53 +1,65 @@
-@import '../../../styles/_sizes';
-@import '../../../styles/_theme';
+@import "../../../styles/_sizes";
+@import "../../../styles/_theme";
 
-:host
-{
-    position: relative;
+:host {
+  position: relative;
 
-    display: block;
+  display: block;
 
-    height: 100%;
+  height: 100%;
 
-    .catalogue--header
-    {
-        margin: 0 0 $app-size-unit 0;
-        padding: $app-size-unit * 2 0;
+  .catalogue--header {
+    margin: 0 0 $app-size-unit 0;
+    padding: $app-size-unit * 2 0;
 
-        text-align: center;
+    text-align: center;
 
-        color: $movie-foreground;
-        background-color: $movie-accent;
-    }
+    color: $movie-foreground;
 
-    .catalogue--items
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    background-color: $movie-accent;
+  }
 
-        @include app-page-padding();
-    }
+  .catalogue--items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    .catalogue--cart-panel
-    {
-        position: fixed;
-        right: 0;
-        bottom: 0;
+    @include app-page-padding();
+  }
 
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+  .catalogue--cart-panel {
+    position: fixed;
+    right: 0;
+    bottom: 0;
 
-        padding: $app-size-unit * 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        color: $movie-foreground;
-        background-color: $movie-primary;
-    }
+    padding: $app-size-unit * 2;
 
-    .catalogue--item
-    {
-        margin: 0 $app-size-unit * 2;
-    }
+    background-color: $movie-primary;
+
+    border-radius: $app-size-unit / 2;
+  }
+
+  .catalogue--item {
+    margin: 0 $app-size-unit * 2;
+  }
+
+  .catalogue--total-sum {
+    margin: 0 $app-size-unit * 2 0 0;
+
+    color: $movie-foreground;
+  }
+
+  .catalogue--link {
+    display: flex;
+    align-items: center;
+
+    color: $movie-foreground;
+
+    text-decoration: none;
+  }
 }

@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ZeroFeatureComponent } from '@app-features/zero-feature/zero-feature.component';
+import { CartItemComponent } from '@app-features/cart/cart-item/cart-item.component';
 
 
-describe('ZeroFeatureComponent', () => {
-  let component: ZeroFeatureComponent;
-  let fixture: ComponentFixture<ZeroFeatureComponent>;
+describe('CartItemComponent', () => {
+  let component: CartItemComponent;
+  let fixture: ComponentFixture<CartItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ZeroFeatureComponent ],
+      declarations: [ CartItemComponent ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ZeroFeatureComponent);
+    fixture = TestBed.createComponent(CartItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

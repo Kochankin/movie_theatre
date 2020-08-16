@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConcessionItemComponent } from './concession-item.component';
+import { ConcessionItemComponent } from '@app-features/catalogue/concession-item/concession-item.component';
+
 
 describe('ConcessionItemComponent', () => {
   let component: ConcessionItemComponent;
@@ -8,7 +9,7 @@ describe('ConcessionItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConcessionItemComponent ]
+      declarations: [ ConcessionItemComponent ],
     })
     .compileComponents();
   }));

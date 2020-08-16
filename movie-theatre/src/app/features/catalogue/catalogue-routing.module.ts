@@ -10,7 +10,6 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: CatalogueComponent,
-    data: { title: 'Catalogue' },
   },
 ];
 

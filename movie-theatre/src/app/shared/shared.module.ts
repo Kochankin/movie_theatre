@@ -12,33 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 export const SHARED_MATERIAL_MODULES: unknown[] = [
   MatIconModule,
   MatButtonModule,
-  // MatToolbarModule,
-  // MatGridListModule,
-  // MatCheckboxModule,
   MatCardModule,
-  // MatGridListModule,
-  // MatTableModule,
-  // MatPaginatorModule,
   MatFormFieldModule,
-  // MatProgressSpinnerModule,
   MatInputModule,
-  // MatSortModule,
-  // MatTooltipModule,
-  // MatMenuModule,
-  // MatDialogModule,
-  // MatStepperModule,
-  // MatRadioModule,
-  // MatTabsModule,
-  // MatDividerModule,
-  // MatSidenavModule,
   MatBadgeModule,
-  // MatButtonToggleModule,
-  // MatDatepickerModule,
-  // MatNativeDateModule,
-  // MatChipsModule,
-  // PortalModule,
-  // MatTreeModule,
-  // MatSlideToggleModule,
 ];
 
 const SHARED_MODULES: unknown[] = [
@@ -57,14 +34,12 @@ const SHARED_DIRECTIVES: unknown[] = [];
   imports: [CommonModule, SHARED_MODULES],
   declarations: [SHARED_COMPONENTS, SHARED_PIPES, SHARED_DIRECTIVES],
   exports: [SHARED_MODULES, SHARED_COMPONENTS, SHARED_PIPES, SHARED_DIRECTIVES],
-  /* NO OTHER PROVIDERS HERE! */
 })
 export class SharedModule {
   public static forRoot(): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
       providers: [],
-      /* ALL SERVICES MUST BE HERE! */
     };
   }
 }

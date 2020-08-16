@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<h2 class="cart--header">Cart</h2>
+
+<main
+  class="cart--items"
+  *ngIf="orderedItems.length; else message"
+>
+  <app-cart-item
+    *ngFor="let orderedItem of orderedItems; trackBy: itemTrackByFunc"
+    [item]="orderedItem"
+    (amountChangeEmitter)="amountChangeHandler($event, orderedItem)"
+  ></app-cart-item>
+</main>
+
+<ng-template #message>
+  <p class="cart--message">Your cart is empty.</p>
+</ng-template>
+
+<mat-card class="cart--actions">
+  <p class="cart--total-sum">
+    <strong>TOTAL SUM:</strong>
+    {{totalOrderedItemsCost | currency}}
+  </p>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onButtonClick()"
+    [disabled]="!orderedItems.length"
+  >
+    PLACE AN ORDER
+  </button>
+</mat-card>

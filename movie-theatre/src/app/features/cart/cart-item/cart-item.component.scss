@@ -6,25 +6,25 @@
 
   margin: $app-size-unit;
 
-  .concession-item--item {
-    max-width: $app-size-unit * 50;
+  .cart-item--item {
+    max-width: $app-size-unit * 30;
 
     background-color: $movie-primary;
   }
 
-  .concession-item--content {
+  .cart-item--content {
     height: $app-size-unit * 10;
 
     overflow: auto;
   }
 
-  .concession-item--actions {
+  .cart-item--actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .concession-item--amount {
+  .cart-item--amount {
     width: $app-size-unit * 6;
   }
 }

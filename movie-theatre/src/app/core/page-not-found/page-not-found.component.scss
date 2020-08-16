@@ -1,9 +1,9 @@
 @import "../../../styles/_sizes";
 @import "../../../styles/_theme";
 
-
 :host {
   display: block;
+
   height: 100%;
 
   color: $movie-primary;
@@ -15,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     height: 100%;
   }
 
@@ -34,6 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     margin-bottom: $app-size-unit * 2;
 
     font-size: get-font-size(0);

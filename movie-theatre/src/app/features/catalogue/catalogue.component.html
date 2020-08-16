@@ -9,12 +9,21 @@
 </main>
 
 <section class="catalogue--cart-panel">
-  
-  <strong>Cart</strong>
-  <mat-icon
-    [matBadge]="totalOrderedItemsAmount"
-    class="catalogue--item"
+
+  <p class="catalogue--total-sum">
+    <strong>TOTAL SUM:</strong>
+    {{totalOrderedItemsCost | currency}}
+  </p>
+  <a
+    routerLink="./../cart"
+    class="catalogue--link"
   >
-    shopping_cart
-  </mat-icon>
+    <strong>Cart</strong>
+    <mat-icon
+      [matBadge]="totalOrderedItemsAmount"
+      class="catalogue--item"
+    >
+      shopping_cart
+    </mat-icon>
+  </a>
 </section>

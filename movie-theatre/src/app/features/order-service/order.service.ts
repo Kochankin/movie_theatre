@@ -7,6 +7,11 @@ import { CatalogueItem, IRequestBody } from '@app-shared/models';
 export class OrderService {
   private _orderedItems: { [id: number]: CatalogueItem };
 
+  private _orderedItemsList: CatalogueItem[];
+  public get orderedItemsList(): CatalogueItem[] {
+    return this._orderedItemsList;
+  }
+
   private _totalItemsNumber: number;
   public get totalItemsNumber(): number {
     return this._totalItemsNumber;
@@ -19,6 +24,7 @@ export class OrderService {
 
   constructor() {
     this._orderedItems = {};
+    this._orderedItemsList = [];
     this._totalItemsCost = 0;
     this._totalItemsNumber = 0;
   }
@@ -34,14 +40,17 @@ export class OrderService {
     const { totalAmount, totalCost } = this.calculateTotalItemsNumber();
     this._totalItemsNumber = totalAmount;
     this._totalItemsCost = totalCost;
+    this._orderedItemsList = Object.values(this._orderedItems);
   }
 
   public placeAnOrder(): void {
     const requestBody = {
-      items: CatalogueItem.deparse(Object.values(this._orderedItems)),
+      items: CatalogueItem.deparse(this._orderedItemsList),
       totalCost: this._totalItemsCost,
     } as IRequestBody;
 
+   // tslint:disable-next-line: no-console
+    console.log(requestBody);
     // here will be some logic for sending http-request
   }
 
