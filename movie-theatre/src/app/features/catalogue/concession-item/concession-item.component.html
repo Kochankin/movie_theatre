@@ -1,0 +1,39 @@
+<mat-card class="concession-item--item">
+  <mat-card-header>
+    <mat-card-title>{{item.name | titlecase}}</mat-card-title>
+    <mat-card-subtitle>{{item.price | currency}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img
+    mat-card-image
+    [src]="item.imageUrl"
+    [alt]="item.name"
+    height="400"
+  >
+
+  <mat-card-content class="concession-item--content">
+    <p>{{item.description}}</p>
+    <strong *ngIf="item.isDiscount">{{item.discountDescription}}</strong>
+  </mat-card-content>
+
+  <mat-card-actions class="concession-item--actions">
+
+    <mat-form-field class="concession-item--amount">
+      <input
+        matInput
+        type="number"
+        min="0"
+        [formControl]="amountControl"
+      >
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onButtonClick()"
+    >
+      <mat-icon>{{buttonIcon}}</mat-icon>
+      UPDATE CART
+    </button>
+  </mat-card-actions>
+</mat-card>

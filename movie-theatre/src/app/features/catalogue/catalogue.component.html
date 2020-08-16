@@ -1,0 +1,20 @@
+<h1 class="catalogue--header">Welcome to our Movie Theatre</h1>
+
+<main class="catalogue--items">
+  <app-concession-item
+    *ngFor="let catalogueItem of catalogueItems; trackBy: itemTrackByFunc"
+    [item]="catalogueItem"
+    (amountChangeEmitter)="amountChangeHandler($event, catalogueItem)"
+  ></app-concession-item>
+</main>
+
+<section class="catalogue--cart-panel">
+  
+  <strong>Cart</strong>
+  <mat-icon
+    [matBadge]="totalOrderedItemsAmount"
+    class="catalogue--item"
+  >
+    shopping_cart
+  </mat-icon>
+</section>

@@ -1,0 +1,18 @@
+@import './styles/_main';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+html,
+body
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: $movie-font-family;
+    font-size: get-font-size();
+
+    margin: 0;
+
+    background-color: $movie-background;
+}

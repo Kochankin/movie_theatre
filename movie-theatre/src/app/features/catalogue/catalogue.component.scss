@@ -1,0 +1,53 @@
+@import '../../../styles/_sizes';
+@import '../../../styles/_theme';
+
+:host
+{
+    position: relative;
+
+    display: block;
+
+    height: 100%;
+
+    .catalogue--header
+    {
+        margin: 0 0 $app-size-unit 0;
+        padding: $app-size-unit * 2 0;
+
+        text-align: center;
+
+        color: $movie-foreground;
+        background-color: $movie-accent;
+    }
+
+    .catalogue--items
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include app-page-padding();
+    }
+
+    .catalogue--cart-panel
+    {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        padding: $app-size-unit * 2;
+
+        color: $movie-foreground;
+        background-color: $movie-primary;
+    }
+
+    .catalogue--item
+    {
+        margin: 0 $app-size-unit * 2;
+    }
+}

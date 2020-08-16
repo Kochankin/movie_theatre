@@ -1,0 +1,1 @@
+export const PAGE_NOT_FOUND_FEATURE_PATH = '404';

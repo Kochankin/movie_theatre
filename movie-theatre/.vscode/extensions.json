@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "angular.ng-template",
+    "stringham.angular-template-formatter",
+    "streetsidesoftware.code-spell-checker",
+    "mrmlnc.vscode-csscomb",
+    "mkaufman.HTMLHint",
+    "hex-ci.stylelint-plus",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
+}

@@ -1,0 +1,35 @@
+@import '../../../../styles/_sizes';
+@import '../../../../styles/_theme';
+
+:host
+{
+    display: block;
+
+    margin: $app-size-unit;
+
+    .concession-item--item
+    {
+        max-width: $app-size-unit * 50;
+
+        background-color: $movie-primary;
+    }
+
+    .concession-item--content
+    {
+        overflow: auto;
+
+        height: $app-size-unit * 10;
+    }
+
+    .concession-item--actions
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .concession-item--amount
+    {
+        width: $app-size-unit * 6;
+    }
+}

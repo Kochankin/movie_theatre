@@ -1,0 +1,30 @@
+[
+  {
+    "name": "popcorn",
+    "id": 1,
+    "price": 3,
+    "imageUrl": "https://www.rachelpaulsfood.com/wp-content/uploads/DSC_0697.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis nibh eros, sed sodales arcu semper ac. Duis sit amet ipsum quis sapien viverra efficitur sit amet non sapien. Quisque.",
+    "discount": null
+  },
+  {
+    "name": "snickers",
+    "id": 2,
+    "price": 4,
+    "imageUrl": "https://cdn1.ozone.ru/multimedia/c650/1021033876.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nibh id mi tincidunt convallis quis ut diam. Aliquam eu mattis ex, eget laoreet urna. In id velit sed felis.",
+    "discount": {
+      "quantityForDiscount": 5,
+      "calculatedQuantity": 3,
+      "discountDescription": "Take five for the price of three!"
+    }
+  },
+  {
+    "name": "soda",
+    "id": 3,
+    "price": 2,
+    "imageUrl": "https://cocacola.scene7.com/is/image/cocacola/barqs-red-creme-soda-12oz-mobile?wid=750&fmt=png-alpha",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor felis libero, sed accumsan lacus ultrices quis. Vestibulum imperdiet ante nulla, tempor tincidunt eros molestie sed. Vestibulum justo eros, dictum id ultricies nec, ullamcorper quis tortor. Quisque non fermentum ex, quis maximus quam. Aliquam at.",
+    "discount": null
+  }
+]

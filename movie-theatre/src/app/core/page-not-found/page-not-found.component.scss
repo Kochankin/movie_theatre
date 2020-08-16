@@ -1,0 +1,42 @@
+@import "../../../styles/_sizes";
+@import "../../../styles/_theme";
+
+
+:host {
+  display: block;
+  height: 100%;
+
+  color: $movie-primary;
+
+  background-color: $movie-background;
+
+  .page-not-found--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .page-not-found--header {
+    margin-bottom: $app-size-unit * 2;
+
+    font-size: get-font-size(6);
+  }
+
+  .page-not-found--symbol {
+    &_accent {
+      color: $movie-accent;
+    }
+  }
+
+  .page-not-found--message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $app-size-unit * 2;
+
+    font-size: get-font-size(0);
+    line-height: get-font-size(1);
+  }
+}

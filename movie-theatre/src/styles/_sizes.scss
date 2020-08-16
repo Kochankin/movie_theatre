@@ -1,0 +1,46 @@
+$app-size-unit: 8px;
+
+$app-font-size-scale: 1.200;
+$app-font-size-base: 14;
+$app-font-min-level: -2;
+$app-font-max-level: 7;
+
+/// @access private
+@function is-integer($value) {
+  @return is-number($value) and round($value) == $value;
+}
+
+/// @access private
+@function get-size($level: 0) {
+  @if not is-integer($level) {
+    @error "Property 'level' must be integer";
+  }
+  @if $level > $app-font-max-level or $level < $app-font-min-level {
+    @error "Property 'level' must be in range: [#{$app-font-min-level} >= level >= #{$app-font-max-level}]";
+  }
+  @if $level > 0 {
+    @return $app-font-size-scale * get-size($level - 1);
+  }
+  @if $level < 0 {
+    @return get-size($level + 1) / $app-font-size-scale;
+  }
+
+  @return $app-font-size-base;
+}
+
+/// @access public
+@function get-font-size($level: 0) {
+  @return get-size($level) + px;
+}
+
+/// @access public
+@mixin app-font-size($level: 0) {
+  font-size: get-font-size($level);
+}
+
+@mixin app-page-padding() {
+  padding: {
+    right: $app-size-unit * 2;
+    left: $app-size-unit * 2;
+  }
+}
