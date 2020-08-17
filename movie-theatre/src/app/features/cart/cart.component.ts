@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { OrderService } from '@app-features/order-service/order.service';
 
@@ -11,7 +11,7 @@ import { CatalogueItem } from '@app-shared/models';
   styleUrls: ['./cart.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CartComponent implements OnInit {
+export class CartComponent {
   private _orderedItems: CatalogueItem[];
   public get orderedItems(): CatalogueItem[] {
     return this._orderedItems;
@@ -26,8 +26,6 @@ export class CartComponent implements OnInit {
     this._totalOrderedItemsCost = this._orderService.totalItemsCost;
     this._orderedItems = this._orderService.orderedItemsList;
   }
-
-  public ngOnInit(): void {}
 
   public amountChangeHandler(amount: number, item: CatalogueItem): void {
     this._orderService.updateOrderedItems(item, amount);

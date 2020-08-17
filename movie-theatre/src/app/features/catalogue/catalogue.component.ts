@@ -40,7 +40,7 @@ export class CatalogueComponent extends OnDestroyMixin implements OnInit {
   }
 
   constructor(
-    private _catalogueService: CatalogueItemsService,
+    private _catalogueItemsService: CatalogueItemsService,
     private _orderService: OrderService,
     private _changeDetectorRef: ChangeDetectorRef,
   ) {
@@ -51,7 +51,7 @@ export class CatalogueComponent extends OnDestroyMixin implements OnInit {
 
   public ngOnInit(): void {
 
-    this._catalogueService
+    this._catalogueItemsService
       .getCatalogueItems()
       .pipe(
         take(1),
